@@ -1,0 +1,142 @@
+fun main() {
+    //Exercise 1
+    println("Use the val keyword when the value doesn't change.")
+    println("Use the var keyword when the value can change.")
+    println("When you define a function, you define the parameters that can be passed to it.")
+    println("When you call a function, you pass arguments for the parameters.")
+    
+    //Exercise 2
+    println("New chat message from a friend")
+    
+    //Exercise 3
+    var discountPercentage: Int = 0
+    var offer: String = ""
+    val item = "Google Chromecast"
+    discountPercentage = 20
+    offer = "Sale - Up to $discountPercentage% discount on $item! Hurry up!"
+    println(offer)
+    
+    //Exercise 4
+    val numberOfAdults = 20
+    val numberOfKids = 30
+    val total = numberOfAdults + numberOfKids
+    println("The total party size is: $total")
+    
+    //Exercise 5.1
+    var firstNumber = 10
+    var secondNumber = 5
+    println("$firstNumber + $secondNumber = $result")
+    
+    //Exercise 5.2
+    val firstNumber = 10
+    val secondNumber = 5
+    val thirdNumber = 8
+    
+    val result = add(firstNumber, secondNumber)
+    val anotherResult = add(firstNumber, thirdNumber)
+
+    println("$firstNumber + $secondNumber = $result")
+    println("$firstNumber + $thirdNumber = $anotherResult")
+    
+    //Exercise 6.1
+    val operatingSystem = "Chrome OS"
+    val emailId = "sample@gmail.com"
+    println(displayAlertMessage(operatingSystem, emailId))
+    
+    //Exercise 6.2
+    val firstUserEmailId = "user_one@gmail.com"
+
+    
+    println(displayAlertMessage(emailId = firstUserEmailId))
+    println()
+
+    val secondUserOperatingSystem = "Windows"
+    val secondUserEmailId = "user_two@gmail.com"
+
+    println(displayAlertMessage(secondUserOperatingSystem, secondUserEmailId))
+    println()
+
+    val thirdUserOperatingSystem = "Mac OS"
+    val thirdUserEmailId = "user_three@gmail.com"
+
+    println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmailId))
+    println()
+    
+    //Exercise 7
+    val steps = 4000
+    val caloriesBurned = pedometerStepsToCalories(steps);
+    println("Walking $steps steps burns $caloriesBurned calories")
+    
+    //Exercise 8
+    var timeSpendToday = 300
+    var timeSpendYesterday = 250
+    println(compare(timeSpendToday,timeSpendYesterday))
+    
+    timeSpendToday = 300
+    timeSpendYesterday = 300
+    println(compare(timeSpendToday,timeSpendYesterday))
+    
+    timeSpendToday = 200
+    timeSpendYesterday = 220
+    println(compare(timeSpendToday,timeSpendYesterday))
+    
+    //Exercise 9
+    var city = "Ankara"
+    var lowTemp = 27
+    var highTemp = 31
+    var rain = 82
+    display(city,lowTemp,highTemp,rain)
+    
+    city = "Tokyo"
+    lowTemp = 32
+    highTemp = 36
+    rain = 10
+    display(city,lowTemp,highTemp,rain)
+    
+    city = "Cape Town"
+    lowTemp = 59
+    highTemp = 64
+    rain = 2
+    display(city,lowTemp,highTemp,rain)
+    
+    city = "Guatemala City"
+    lowTemp = 50
+    highTemp = 55
+    rain = 7
+    display(city,lowTemp,highTemp,rain)
+}
+//___________________________________________________________________________________________________________________
+//Exericse 5.2
+fun add(fn : Int, sn : Int) : Int{
+   return fn+sn
+}
+
+//Exercise 6.1
+fun displayAlertMessage(os : String, email: String) : String{
+    return "Operating system is $os, email is $email"
+}
+
+//Exercise 6.2
+fun displayAlertMessage(os : String = "Linux", emailId: String) : String{
+    return "Operating system is $os, email is $emailId"
+}
+
+//Exercise 7
+fun pedometerStepsToCalories(numberOfSteps: Int): Double {
+    val caloriesBurnedForEachStep = 0.04
+    val totalCaloriesBurned = numberOfSteps * caloriesBurnedForEachStep
+    return totalCaloriesBurned
+}
+
+//Exercise 8
+fun compare(tt : Int, ty : Int) : Boolean{
+    return tt > ty
+}   
+
+//Exercise 9
+fun display(city:String , lowTemp:Int, highTemp:Int, rain:Int):Unit{
+    println("City: $city")
+    println("Low temperature: $lowTemp, High temperature: $highTemp")
+    println("Chance of rain: $rain%")
+    println()
+}
